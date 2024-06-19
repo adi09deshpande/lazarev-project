@@ -36,3 +36,32 @@ nav.addEventListener("mouseleave",function () {
 }
 
 navAnimation()
+
+
+function page2Animation() {
+    var rightElems=document.querySelectorAll(".right-elem")
+
+rightElems.forEach(function (elem) {
+    elem.addEventListener("mouseenter",function () {
+        gsap.to(elem.childNodes[3],{
+            opacity:1,
+            scale:1
+        })
+    })
+    elem.addEventListener("mouseleave",function () {
+        gsap.to(elem.childNodes[3],{
+            opacity:0,
+            scale:0
+        })
+    })
+    elem.addEventListener("mousemove",function (x) {
+        gsap.to(elem.childNodes[3],{
+            x:x.x - elem.getBoundingClientRect().x -50,
+            y:x.y - elem.getBoundingClientRect().y -150
+        })
+    })
+
+})
+}
+
+page2Animation();

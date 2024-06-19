@@ -164,4 +164,55 @@ nav button svg{
     height: 100vh;
     width: 100%;
     background-color: #111;
+    position: relative;
+    padding: 0vw 6.7vw;
+    padding-bottom: 6.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+}
+
+#page2-left{
+    height: 100%;
+    width: 40%;
+    /* background-color: #0DA34E; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3vw 0vw;
+}
+#page2-left p{
+    font-size: 1vw;
+}
+#page2-left h5{
+    width: 74%;
+    font-weight: 500;
+    font-size: 1.2vw;
+}
+#page2-right{
+    height: 100%;
+    width: 50%;
+    /* background-color: #a0a30d; */
+}
+.right-elem {
+    position: relative;
+    height: 10vh;
+    padding-top: 2vw;
+    padding-bottom: 7.4vw;
+    border-top: 1px solid #333;
+}
+.right-elem h2{
+    font-size: 1.6vw;
+    font-weight: 400;
+}
+.right-elem img{
+    height: 7vw;
+    width: 7vw;
+    opacity: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    scale:0;
 }
