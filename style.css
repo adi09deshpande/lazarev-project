@@ -216,3 +216,207 @@ nav button svg{
     position: absolute;
     scale:0;
 }
+/* -----------------------------------------------------page 3------------------------------------------------------ */
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+    background-size: cover;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.page3-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page3-center h5{
+    padding: 10px 15px;
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 0.85vw;
+    opacity: 0;
+    margin-top: 1.1vw;
+}
+.page3-center .icon{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+    border-radius: 50%;
+}
+.page3-center .icon i{
+    color: black;
+    font-size: 3vw;
+}
+#page3 video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    transform: scaleX(0.7) scaleY(0); 
+    opacity: 0;
+    border-radius: 30px;
+}
+/* -----------------------------------------------------page 4------------------------------------------------------ */
+
+#page4{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 7vw 5.3vw;
+}
+
+.part4-left{
+    height: 100%;
+    width: 50%;
+}
+.part4-left h1{
+    font-size: 3vw;
+    width: 55%;
+    color: black;
+}
+.part4-right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.part4-right-part{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+.part4-right-part h5{
+    font-size: 1vw;
+    text-transform: uppercase;
+    color: #A6A6A6;
+    font-weight: 500;
+}
+.part4-right-part p{
+    font-size: 1.6vw;
+    color: black;
+}
+/* -----------------------------------------------------page 5------------------------------------------------------ */
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    padding: 0 5.3vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+}
+
+.page5-box{
+    width: 32.5%;
+    height: 45%;
+    border: 2px solid white;
+    padding: 1.8vw;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box-part{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3vw;
+}
+.page5-box h1{
+    font-weight: 500;
+    font-size: 4.5vw;
+    color: black;
+}
+.page5-box p{
+    color: #A6A6A6;
+}
+.box-part p{
+    color: black;
+}
+/* -----------------------------------------------------page 6------------------------------------------------------ */
+
+#page6{
+    height: 80vh;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0vw 4vw;
+}
+#page6 .page6-text{
+    width: 70%;
+}
+#page6 .page6-text .page-text-part{
+    display: flex;
+    justify-content: space-between;
+    gap: 10vw;
+    align-items: flex-start;
+}
+
+.page-text-part h5{
+    margin-top: 10px;
+    color: black;
+    font-weight: 500;
+    white-space: nowrap;
+}
+#page6 p{
+    color: black;
+    font-size: 2.5vw;
+}
+/* -----------------------------------------------------page 7------------------------------------------------------ */
+
+#page7{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 6.5vw;
+    padding-bottom: 10vh;
+}
+.sec-left{
+    border-top: 2px solid #A6A6A6;
+    height: 100%;
+    width: 25%;
+    padding-top: 3vh;
+}
+.sec-left h2{
+    font-weight: 500;
+    font-size: 2.5vw;
+    color: black;
+}
+
+.sec-left-part{
+    margin-top: 10vh;
+}
+.sec-left p{
+    margin-top: 4vh;
+    color: black;
+    font-size: 1.2vw;
+}
+.sec-right{
+    height: 100%;
+    display: flex;
+    width: 70%;
+}
+.sec-right img{
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+}

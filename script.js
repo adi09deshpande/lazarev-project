@@ -35,7 +35,7 @@ nav.addEventListener("mouseleave",function () {
 
 }
 
-navAnimation()
+// navAnimation()
 
 
 function page2Animation() {
@@ -64,4 +64,43 @@ rightElems.forEach(function (elem) {
 })
 }
 
-page2Animation();
+// page2Animation();
+
+function page3VideoAnimation() {
+    var playBtn=document.querySelector(".icon")
+playBtn.addEventListener("mouseenter",function () {
+    gsap.to('.page3-center h5',{
+    opacity:1,
+    y:-10
+    })
+})
+playBtn.addEventListener("mouseleave",function () {
+    gsap.to('.page3-center h5',{
+    opacity:0,
+    y:0
+    })
+})
+
+var videoPlayBtn=document.querySelector(".page3-center")
+var video=document.querySelector("#page3 video")
+
+videoPlayBtn.addEventListener("click",function () {
+    video.play()
+    gsap.to(video,{
+        transform:"scaleX(1) scaleY(1)",
+        opacity:1,
+        borderRadius:0
+    })
+})
+
+video.addEventListener("click",function () {
+    video.pause()
+    gsap.to(video,{
+        transform:"scaleX(0.7) scaleY(0)",
+        opacity:0,
+        borderRadius:"30px"
+    })
+})
+}
+
+page3VideoAnimation();
