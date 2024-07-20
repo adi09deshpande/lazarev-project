@@ -1,3 +1,69 @@
+function locomotive() {
+    gsap.registerPlugin(ScrollTrigger);
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector("#main"),
+  smooth: true,
+
+  // for tablet smooth
+  tablet: { smooth: true },
+
+  // for mobile
+  smartphone: { smooth: true }
+});
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy("#main", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  }
+});
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+ScrollTrigger.refresh();
+
+}
+function loadingAnimation() {
+    var tl=gsap.timeline()
+    tl.from('#page1',{
+        opacity:0,
+        duration:0.1
+    })
+    tl.from('#page1',{
+        transform:"scaleX(0.7) scaleY(0.05) translateY(30%)",
+        borderRadius:"50px",
+        duration:2.5,
+        ease:"expo.out"
+    })
+    tl.from('nav',{
+        opacity:0,
+        delay:-0.4
+    })
+
+    tl.from('#page1 h1',{
+    opacity:0,
+    y:50,
+    duration: 0.6,
+    stagger:0.3
+    },"anim")
+
+    tl.from('#page1 p,#page1 div',{
+        opacity:0,
+        delay:0.3,
+        duration:0.4,
+        stagger:0.2
+    },"anim")
+}
 function navAnimation() {
     var nav=document.querySelector("nav")
 nav.addEventListener("mouseenter",function () {
@@ -35,9 +101,6 @@ nav.addEventListener("mouseleave",function () {
 
 }
 
-// navAnimation()
-
-
 function page2Animation() {
     var rightElems=document.querySelectorAll(".right-elem")
 
@@ -63,8 +126,6 @@ rightElems.forEach(function (elem) {
 
 })
 }
-
-page2Animation();
 
 function page3VideoAnimation() {
     var playBtn=document.querySelector(".icon")
@@ -103,8 +164,6 @@ video.addEventListener("click",function () {
 })
 }
 
-page3VideoAnimation();
-
 function videoAnimation() {
     var sections=document.querySelectorAll(".sec-right")
 
@@ -120,8 +179,6 @@ sections.forEach(function (x)
     })
 })
 }
-videoAnimation();
-
 function page10_moveEffect()
 {
     gsap.from('.btm10-parts h4',{
@@ -129,11 +186,19 @@ function page10_moveEffect()
     duration:0.2,
     scrollTrigger:{
     trigger:'#page10-bottom',
-    scroller: 'body',
+    scroller: '#main',
     start:'top 80%',
     end:'top -80%',
     scrub:3,
     }
     })
 }
-page10_moveEffect()
+
+
+locomotive();
+loadingAnimation();
+// navAnimation();
+page2Animation();
+page3VideoAnimation();
+videoAnimation();
+page10_moveEffect();

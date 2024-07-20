@@ -89,12 +89,14 @@ nav button svg{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     justify-content: center;
 }
 #page1 h1{
     font-size: 8.5vw;
     text-transform: uppercase;
     font-weight: 900;
+    overflow: hidden;
     line-height: 8.5vw;
 }
 #page1 h1 svg{
@@ -778,9 +780,4 @@ details[open] #show{
 }
 .bottom10-part2 h4:nth-child(7){
     transform: translateX(50%);
-}
-
-#page11{
-    height: 100vh;
-    width: 100%;
 }
